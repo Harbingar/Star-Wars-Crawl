@@ -1,0 +1,52 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+img{
+    width: 50%;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+main {
+    perspective: 800px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: black;
+}
+
+.crawl {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(20deg);
+    transform-origin: 50% 100%;
+    animation: crawl 60s linear forwards infinite;
+}
+.crawl img{
+    display: block;
+    margin: 0 auto 20px;
+    width: 50%;
+}
+.crawl p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5em;
+    color: yellow;
+    text-align: center;
+    margin: 10px;
+    line-height: 1.2;
+}
+
+@keyframes crawl {
+    0% {
+        transform: translate(-50%, -50%) rotateX(40deg) translateY(100%);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotateX(40deg) translateY(-100%);
+    }
+}
